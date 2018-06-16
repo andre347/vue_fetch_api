@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The greatest user app ever</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+
+    <style>
+        .container {
+            padding: 20px 0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <h3 class="text-center">Users</h3>
+        <div class="columns medium-3" v-for="result in results">
+            <div class="card">
+                <div class="card-divider">
+                    {{ result.login.username }}
+                </div>
+                <div class="card-section">
+                    <img v-bind:src="result.picture.large">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
